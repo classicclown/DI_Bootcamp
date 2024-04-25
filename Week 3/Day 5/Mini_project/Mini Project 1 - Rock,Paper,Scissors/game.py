@@ -30,9 +30,9 @@ class Game:
         return result
     
     def play(self):
-        user_input=Game.get_user_item(self)
-        comp_input=Game.get_computer_item()
-        game=Game.get_game_result(self,user_input,comp_input)
+        user_input=self.get_user_item(self)
+        comp_input=self.get_computer_item()
+        game=self.get_game_result(self,user_input,comp_input)
         print(f"You selected {user_input} and the computer chose {comp_input}. Result: {game}")
         if game=='Win':
             return 'Win'
