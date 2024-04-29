@@ -28,9 +28,9 @@ class Siamese(Cat):
     def sing (self,sounds):
         return f'{sounds}'
     
-all_cats = [Bengal("Ben",1),Chartreux("Fluffy",4),Siamese("Winston",5)]
-sara_pets = Pets(all_cats)
-sara_pets.walk()
+# all_cats = [Bengal("Ben",1),Chartreux("Fluffy",4),Siamese("Winston",5)]
+# sara_pets = Pets(all_cats)
+#ara_pets.walk()
     
 class Dogs:
     def __init__(self,name,age,weight):
@@ -54,5 +54,5 @@ dog1 = Dogs("Ruff",2,20)
 dog2=Dogs("Mucho",4,10)
 dog3=Dogs("Spot",6,40)
 
-print(dog1.fight(dog3))
+#print(dog1.fight(dog3))
 
