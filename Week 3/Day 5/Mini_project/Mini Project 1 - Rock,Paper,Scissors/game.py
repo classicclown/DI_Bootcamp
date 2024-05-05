@@ -2,7 +2,7 @@ import random
 
 class Game:
 
-    def get_user_item(self):
+    def get_user_item():
         user_input=input("Select an item: (r)ock, (p)aper or (s)cissors: ")
         while user_input not in ['r','s','p']:
             user_input=input("Select an item: (r)ock, (p)aper or (s)cissors ")
@@ -30,9 +30,9 @@ class Game:
         return result
     
     def play(self):
-        user_input=self.get_user_item(self)
-        comp_input=self.get_computer_item()
-        game=self.get_game_result(self,user_input,comp_input)
+        user_input=Game.get_user_item()
+        comp_input=Game.get_computer_item()
+        game=Game.get_game_result(self,user_input,comp_input)
         print(f"You selected {user_input} and the computer chose {comp_input}. Result: {game}")
         if game=='Win':
             return 'Win'
@@ -40,6 +40,7 @@ class Game:
             return 'Tie'
         else:
             return 'Loss'
+
 
 
 
