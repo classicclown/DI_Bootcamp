@@ -64,20 +64,37 @@ def rand_gen_string():
 (rand_gen_string())
 
 
-import datetime
-#from datetime import date
-
-def current_date():
-    print (datetime.date.today())
-
-current_date()
+from datetime import datetime
+from datetime import date
 
 def until_jan ():
-    day = datetime.date.today()
-    hour=datetime.datetime.now().hour
-    minute=datetime.datetime.now().minute
-    jan = datetime.datetime(2025,1,1,8,0,0)
-    until_jan=jan-(day,hour,minute)
-    print(f"The time until Jan 1s,2025 is {until_jan}")
+    now=datetime.now()
+    target=datetime(2025,1,1,1,1,1,1)
+    print(f"The time until Jan 1st,2025 is {target-now}")
 
 until_jan()
+
+def birthday(year,month,day):
+    start=datetime(year,month,day,1,1,1)
+    now=datetime.now()
+    minutes_lived=(now-start).total_seconds()//60
+    print (f"Minutes lived: {minutes_lived}")
+
+#birthday(1995,1,27)
+
+from faker import Faker
+
+def add_new_users():
+    fake=Faker()
+    users=[]
+    name=fake.name()
+    address=fake.address()
+    language_code=fake.language_code()
+    new_user = {'name':name,'address':address,'language':language_code}
+    users.append(new_user)
+    print(users)
+    
+
+add_new_users()
+
+
