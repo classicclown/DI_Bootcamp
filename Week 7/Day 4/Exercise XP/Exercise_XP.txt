@@ -1,0 +1,43 @@
+Question 1:
+A company’s financial reports stored in an Excel file - structured
+Photographs uploaded to a social media platform - unstructured
+A collection of news articles on a website - unstructured
+Inventory data in a relational database - structured
+Recorded interviews from a market research study - unstructured
+
+Question 2:
+- A series of blog posts about travel experiences.
+Extract the most valuable points of the article using AI/NLP
+To be efficient, it makes the most sense to sort through the articles using some form of computer processing. From there the data could be sorted/categorised 
+by what is relevent. ie number of nights recomended, budget etc
+
+- Audio recordings of customer service calls.
+Translate the audio to text and then extract the most valuable insights again using computer processing
+You can gain insight into a lot by analysing data from calls, like call duration, number of resolved tickets, ratio of solved tickets to calls etc
+
+- Handwritten notes from a brainstorming session.
+Sort notes into catergories like degrees of practicality/degrees of effort needed and then can further sort the notes by smaller details, like who wrote the note.
+
+- A video tutorial on cooking.
+Speech to text and then extract the important info as mentioned above.
+
+Question 3:
+Transaction records:
+Structured
+With Transaction records, you can analyse different metrics like avg price of goods sold, you can see which items are selling quick or slow and use that to optimise stock management.
+
+Customer feedback:
+Unstructured
+By extracting and analysing customer feedback you can find shortfalls in the business.
+
+Social media posts:
+Unstructured
+You can spot trends and adapt your stock to capitalise on the trends, you can target customers based on certain information
+
+Employee work schedules:
+Structured
+You can see which employees work the most efficiently, work the most hours, who arrives late/early
+
+
+
+
