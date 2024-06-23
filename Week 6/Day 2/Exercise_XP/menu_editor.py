@@ -9,6 +9,7 @@ def view_item(manager):
     item=input("What item do you want to view?\n")
     result = manager.get_by_name(item)
     print(result)
+
     
 def add_item_to_menu():
     item=input("What item do you want to add?\n")
