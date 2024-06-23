@@ -9,6 +9,7 @@ class MenuItem:
             port=5432)
               
     cursor=conn.cursor()
+    
 
 
     def __init__(self,name="",price=0):
