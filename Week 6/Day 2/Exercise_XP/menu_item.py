@@ -1,86 +1,73 @@
 import psycopg2
-try:
-        connection = psycopg2.connect(
-        database='Menu2',
-        user='postgres',
-            password='',
-            host='localhost',
-            port=5432
-            )
-except Exception as e:
-            print (f'Error: {e}')      
-cursor = connection.cursor()
 
 class MenuItem:
+    conn = psycopg2.connect(
+            database='Menu',
+            user='postgres',
+            password='password',
+            host='localhost',
+            port=5432)
+              
+    cursor=conn.cursor()
 
-    def __init__(self,name,price):
+
+    def __init__(self,name="",price=0):
         self.name=name
         self.price=price
 
-    def connect():
-        pass
-        
-    def save (table_name,menu_item,price):
-        query=f'insert into {table_name} values {menu_item},{price}'
-        #cursor=connection.cursor()
-        cursor.execute(query)
-        connection.commit()
-        cursor.close()
-        return query
+    def save (self):
+        query = f"INSERT INTO Menu_Items (item_name, item_price) VALUES (%s,%s)"
+        self.cursor.execute(query,(self.name,self.price))
+        self.conn.commit()
+        print ("Saved")
  
-    def delete(table_name,item_name):
-        query=f'delete from {table_name} where item_name like {item_name}'
-        cursor.execute(query)
-        connection.commit()
-        cursor.close()
+    def delete(self):
+        query=f"delete from Menu_Items where item_name = %s"
+        self.cursor.execute(query,(self.name,))
+        self.conn.commit()
+        print("Deleted")
+ 
+    def update(self, menu_item,price):
+        query=f"update Menu_Items set item_price=%s where item_name =%s"
+        self.cursor.execute(query,(price,menu_item))
+        self.conn.commit()
+        print("Updated")
+    
+class MenuManager(MenuItem):
 
-    def update(table_name, menu_item, price):
-        query=f'update {table_name} set item_price={price} where item_name like {menu_item}'
-        cursor.execute(query)
-        connection.commit()
-        cursor.close()
-        
+    def __init__ (self,name="",price=0):
+        super().__init__(name,price)
 
-    if "name" == '__main__':
-        
-        table_name='Menu_items'
+    def get_by_name(self,name):
+        query=f"select * from Menu_items where item_name like %s"
+        self.cursor.execute(query,(name,))
+        result=self.cursor.fetchone()
+        return result
 
-        user_input = input('Enter which function you want to perform: Save, update or delete.')
-        if user_input == 'save':
-            # table_name=input('Which table?\n')
-            menu_item=input('Which menu item?\n')
-            price=input('What price?\n')
-            save(table_name,menu_item,price)
-        elif user_input=='update':
-            # table_name=input('Which table?\n')
-            menu_item = input ("What menu item do you want to update?")
-            price=input("What price do you want to set?")
-            update(table_name,menu_item,price)
-        elif user_input=='delete':
-            # table_name=input('Which table?\n')
-            menu_item = input ("What menu item do you want to delete?")
-            delete(table_name,menu_item)
-        else:
-            user_input=input('Invalid input')
-
-class MenuManager:
-
-    def get_by_name(name):
-        query=f'select * from Menu_items where item_name like {name}'
-        cursor.execute(query)
-        result=cursor.fetchall()
-        if result: return result
-        else: return None
-
-    def all_items():
-         query=f'select * from Menu_Items'
-         cursor.execute(query)
-         result=cursor.fetchall()
+    def all_items(self):
+         query=f"select * from Menu_Items"
+         self.cursor.execute(query)
+         result=self.cursor.fetchall()
          return result
+    
+if __name__ == "__main__":
+        
+        try:
+           
+            MenuItem.cursor.close()
+            MenuItem.conn.close()
+
+        except Exception as e:
+            print (e)
+            
+
+
+
 
              
         
-    
+
+
     
                     
 
