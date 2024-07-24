@@ -12,21 +12,21 @@ soup_ocean_ws = BeautifulSoup(html_ocean_ws, 'html.parser')
 title = soup_ocean_ws.find('title')
 print (title.text)
 
-# for paragraphs in soup_ocean_ws.find_all('p'):
-    # print(paragraphs.get_text())
+for paragraphs in soup_ocean_ws.find_all('p'):
+    print(paragraphs.get_text())
 
-# for links in soup_ocean_ws.find_all('a'):
-#     print (links.get('href'))
+for links in soup_ocean_ws.find_all('a'):
+    print (links.get('href'))
 
 
-#Exercise 2
+# Exercise 2
 
-# url2 = 'http://en.wikipedia.org/robots.txt'
-# response=requests.get(url)
-# html = response.text
-# soup = BeautifulSoup(html, 'html.parser')
-# soup.prettify()
-# print(soup.text)
+url2 = 'http://en.wikipedia.org/robots.txt'
+response=requests.get(url)
+html = response.text
+soup = BeautifulSoup(html, 'html.parser')
+soup.prettify()
+print(soup.get_text())
 
 
 #Exercise 3
