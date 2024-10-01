@@ -1,0 +1,2205 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0711.1636                               -->
+<workbook original-version='18.1' source-build='2024.2.1 (20242.24.0711.1636)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='stream_data (1) (2)' inline='true' name='federated.1v48t8p1456dl612q4rrp0oa2hj5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='stream_data (1)' name='textscan.0rx9uge0mz5w5v15gn3ya0v1h840'>
+            <connection class='textscan' directory='/Users/ryankopping/Documents/DI_Bootcamp/Week 20/Files' filename='stream_data (1).csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Average Viewers (copy)' datatype='integer' name='[Average Viewers (copy)_1144125478204309508]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[F8]' />
+      </column>
+      <column caption='Watch time rank' datatype='integer' name='[Calculation_1144125478195159040]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='RANK(sum([F3]),&apos;desc&apos;)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stream time rank' datatype='integer' name='[Calculation_1144125478197825538]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='RANK(sum([F4]),&apos;desc&apos;)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Average viewer ratio' datatype='real' name='[F10]' role='dimension' type='ordinal' />
+      <column caption='Year' datatype='date' datatype-customized='true' name='[F11]' role='dimension' type='quantitative' />
+      <column caption='Watch time' datatype='real' name='[F3]' role='dimension' type='ordinal' />
+      <column caption='Stream time' datatype='real' name='[F4]' role='dimension' type='ordinal' />
+      <column caption='Peak Viewers' datatype='integer' name='[F5]' role='dimension' type='ordinal' />
+      <column caption='Peak Channels' datatype='integer' name='[F6]' role='dimension' type='ordinal' />
+      <column caption='Streamers' datatype='integer' name='[F7]' role='dimension' type='ordinal' />
+      <column caption='Average Viewers' datatype='integer' name='[F8]' role='dimension' type='ordinal' />
+      <column caption='Average Channels' datatype='integer' name='[F9]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Game]' role='dimension' type='nominal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Game)' hidden='true' name='[Action (Game)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Game]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/vb/899gc5ld2m34yphmb2v4kr_80000gn/T/tableau-temp/#TableauTemp_0m7tqkf179pdo011h24fo14zx1sg.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/28/2024 05:00:59 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F2</remote-alias>
+              <ordinal>1</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>136</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F3</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[F3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F3</remote-alias>
+              <ordinal>2</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>395</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F4</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[F4]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F4</remote-alias>
+              <ordinal>3</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>395</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F5</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F5]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F5</remote-alias>
+              <ordinal>4</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>395</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F6</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F6]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F6</remote-alias>
+              <ordinal>5</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>382</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F7</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F7]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F7</remote-alias>
+              <ordinal>6</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>395</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F8</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F8]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F8</remote-alias>
+              <ordinal>7</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>387</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F9</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F9]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F9</remote-alias>
+              <ordinal>8</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>326</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F10</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[F10]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F10</remote-alias>
+              <ordinal>9</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>388</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F11</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[F11]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F11</remote-alias>
+              <ordinal>10</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;South Africa&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='stream_data (1).csv' id='stream_data (1).csv_5F5D15A77ECC43EABD84D7901C94FFC4'>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Normalised' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Yes&quot;'>
+        <calculation class='tableau' formula='&quot;Yes&quot;' />
+        <members>
+          <member value='&quot;Yes&quot;' />
+          <member value='&quot;No&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='stream_data (1) (3)' inline='true' name='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='stream_data (1)' name='textscan.1e072pn1qmjboc1gxcrh30r14g45'>
+            <connection class='textscan' directory='/Users/ryankopping/Documents/DI_Bootcamp/Week 20/Files' filename='stream_data (1).csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1e072pn1qmjboc1gxcrh30r14g45' name='stream_data (1).csv' table='[stream_data (1)#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_ZA' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Game' ordinal='1' />
+            <column datatype='real' name='Watch time (hrs)' ordinal='2' />
+            <column datatype='real' name='Stream time (hrs)' ordinal='3' />
+            <column datatype='integer' name='Peak viewers' ordinal='4' />
+            <column datatype='integer' name='Peak channels' ordinal='5' />
+            <column datatype='integer' name='Streamers' ordinal='6' />
+            <column datatype='integer' name='Average viewers' ordinal='7' />
+            <column datatype='integer' name='Average channels' ordinal='8' />
+            <column datatype='real' name='Average viewer ratio' ordinal='9' />
+            <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='10' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1e072pn1qmjboc1gxcrh30r14g45' name='stream_data (1).csv' table='[stream_data (1)#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_ZA' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Game' ordinal='1' />
+            <column datatype='real' name='Watch time (hrs)' ordinal='2' />
+            <column datatype='real' name='Stream time (hrs)' ordinal='3' />
+            <column datatype='integer' name='Peak viewers' ordinal='4' />
+            <column datatype='integer' name='Peak channels' ordinal='5' />
+            <column datatype='integer' name='Streamers' ordinal='6' />
+            <column datatype='integer' name='Average viewers' ordinal='7' />
+            <column datatype='integer' name='Average channels' ordinal='8' />
+            <column datatype='real' name='Average viewer ratio' ordinal='9' />
+            <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='10' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;R&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_ZA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Game</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Game]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>Game</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Watch time (hrs)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Watch time (hrs)]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>Watch time (hrs)</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stream time (hrs)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Stream time (hrs)]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>Stream time (hrs)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Peak viewers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Peak viewers]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>Peak viewers</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Peak channels</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Peak channels]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>Peak channels</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Streamers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Streamers]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>Streamers</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average viewers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Average viewers]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>Average viewers</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average channels</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Average channels]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>Average channels</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average viewer ratio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Average viewer ratio]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>Average viewer ratio</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[stream_data (1).csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Watch time rank' datatype='integer' name='[Calculation_1144125478195159040]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='RANK(sum([Watch time (hrs)]),&apos;desc&apos;)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stream time rank' datatype='integer' name='[Calculation_1144125478197825538]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='RANK(sum([Stream time (hrs)]),&apos;desc&apos;)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Normaised watch time' datatype='real' name='[Calculation_1144125478957219852]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='( SUM([Watch time (hrs)]) - WINDOW_MIN(SUM([Watch time (hrs)])) ) / ( WINDOW_MAX(SUM([Watch time (hrs)])) - WINDOW_MIN(SUM([Watch time (hrs)])) )'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='string' name='[Game]' role='dimension' type='nominal' />
+      <column caption='Normaised stream time ' datatype='real' name='[Normaised watch time (copy)_1144125478959140877]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='( SUM([Stream time (hrs)]) - WINDOW_MIN(SUM([Stream time (hrs)])) ) / ( WINDOW_MAX(SUM([Stream time (hrs)])) - WINDOW_MIN(SUM([Stream time (hrs)])) )'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stream time' datatype='real' name='[Stream time (hrs)]' role='measure' type='quantitative' />
+      <column caption='Watch time' datatype='real' name='[Watch time (hrs)]' role='measure' type='quantitative' />
+      <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='ordinal' />
+      <_.fcp.ObjectModelTableType.true...column caption='stream_data (1).csv' datatype='table' name='[__tableau_internal_object_id__].[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]' role='measure' type='quantitative' />
+      <column-instance column='[Game]' derivation='None' name='[none:Game:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Stream time (hrs)]' derivation='Sum' name='[sum:Stream time (hrs):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Watch time (hrs)]' derivation='Sum' name='[sum:Watch time (hrs):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1144125478957219852]' derivation='User' name='[usr:Calculation_1144125478957219852:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <column-instance column='[Normaised watch time (copy)_1144125478959140877]' derivation='User' name='[usr:Normaised watch time (copy)_1144125478959140877:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <group caption='Action (Game)' hidden='true' name='[Action (Game)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Game]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/vb/899gc5ld2m34yphmb2v4kr_80000gn/T/tableau-temp/#TableauTemp_0whq3hd0xuzixj17xxkkx0xem9u8.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/28/2024 05:07:18 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy' name='Year' />
+            </columns>
+          </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy' name='Year' />
+            </columns>
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Game</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Game]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Game</remote-alias>
+              <ordinal>1</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>135</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Watch time (hrs)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Watch time (hrs)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Watch time (hrs)</remote-alias>
+              <ordinal>2</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>394</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Stream time (hrs)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Stream time (hrs)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Stream time (hrs)</remote-alias>
+              <ordinal>3</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>394</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Peak viewers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Peak viewers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Peak viewers</remote-alias>
+              <ordinal>4</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>394</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Peak channels</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Peak channels]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Peak channels</remote-alias>
+              <ordinal>5</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>381</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Streamers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Streamers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Streamers</remote-alias>
+              <ordinal>6</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>394</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Average viewers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Average viewers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Average viewers</remote-alias>
+              <ordinal>7</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>386</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Average channels</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Average channels]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Average channels</remote-alias>
+              <ordinal>8</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>325</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Average viewer ratio</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Average viewer ratio]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Average viewer ratio</remote-alias>
+              <ordinal>9</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>387</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>7</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>10</ordinal>
+              <family>stream_data (1).csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Game:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Arma 3&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Clash Royale&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;FIFA 17&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Hogwarts Legacy&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Pokémon Sword/Shield&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;StarCraft II&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;VALORANT&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Call of Duty: Modern Warfare II&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Dota 2&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Fortnite&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Garena Free Fire&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;New World&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Rust&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;The Elder Scrolls Online&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Among Us&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Casino&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;ELDEN RING&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Gwent: The Witcher Card Game&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Overwatch 2&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Slots&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Tom Clancy&apos;s Rainbow Six Siege&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Auto Chess&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Dark and Darker&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;FIFA 21&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Lost Ark&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Realm Royale Reforged&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Super Mario Maker 2&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;World of Tanks&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Art&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Counter-Strike&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;FIFA 18&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;I&apos;m Only Sleeping&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Poker&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Street Fighter 6&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Virtual Casino&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Animal Crossing: New Horizons&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Casino Jackpot&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Escape from Tarkov&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Halo 5: Guardians&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Path of Exile&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SMITE&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Tom Clancy&apos;s The Division&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Call of Duty: Black Ops 4&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Call of Duty: Infinite Warfare&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Diablo III&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Friday the 13th: The Game&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Rocket League&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Tekken 7&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Albion Online&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Call of Duty: Modern Warfare III&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;E3 2016&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Genshin Impact&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;No Man&apos;s Sky&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Sea of Thieves&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;The Elder Scrolls V: Skyrim&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Blade &amp; Soul&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Destiny&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;For Honor&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Music&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Resident Evil Village&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Talk Shows &amp; Podcasts&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Apex Legends&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Casino_old&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Fall Guys&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Hearthstone&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Phasmophobia&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Special Events&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Tom Clancy&apos;s The Division 2&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Baldur&apos;s Gate 3&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;DARK SOULS III&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;FIFA 22&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Magic: The Gathering&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Red Dead Redemption 2&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Super Smash Bros. for Wii U&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;World of Warcraft&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Battlefield 1&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;DayZ&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;FIFA 23&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Minecraft&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Resident Evil 2&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Super Smash Bros. Melee&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Z1: Battle Royale&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Borderlands 3&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Call of Duty: Black Ops III&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Destiny 2&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;NBA 2K16&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Retro&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Teamfight Tactics&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Call of Duty: Black Ops Cold War&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Call of Duty: Modern Warfare&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Diablo IV&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Games + Demos&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;RuneScape&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;The Culling&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Creative&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;FIFA 19&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;IRL&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;League of Legends&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Pools, Hot Tubs, and Beaches&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Street Fighter V&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Warcraft III&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ARK: Survival Evolved&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Chess&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;FIFA 16&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Heroes of the Storm&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Pokémon Omega Ruby/Alpha Sapphire&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sports&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Valheim&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Call of Duty: Warzone&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;E3 2018&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;God of War&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Grand Theft Auto V&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Old School RuneScape&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Sekiro: Shadows Die Twice&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;The Legend of Zelda: Breath of the Wild&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Black Desert&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Dead by Daylight&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;FINAL FANTASY XIV ONLINE&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Monster Hunter: World&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Resident Evil 7: Biohazard&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Super Smash Bros. Ultimate&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;ASMR&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Cyberpunk 2077&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;FIFA 20&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;NBA 2K20&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;PUBG: BATTLEGROUNDS&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Super Mario Maker&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Warframe&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Always On&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Call of Duty: WWII&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;EA Sports FC 24&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;NBA 2K17&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Overwatch&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Slay the Spire&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Tibia&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Stream time (hrs):qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Normaised watch time (copy)_1144125478959140877:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Watch time (hrs):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478957219852:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;South Africa&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='stream_data (1).csv' id='stream_data (1).csv_6A5CEE9B709940C6A4152412593E7FA2'>
+            <properties context=''>
+              <relation connection='textscan.1e072pn1qmjboc1gxcrh30r14g45' name='stream_data (1).csv' table='[stream_data (1)#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_ZA' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='Game' ordinal='1' />
+                  <column datatype='real' name='Watch time (hrs)' ordinal='2' />
+                  <column datatype='real' name='Stream time (hrs)' ordinal='3' />
+                  <column datatype='integer' name='Peak viewers' ordinal='4' />
+                  <column datatype='integer' name='Peak channels' ordinal='5' />
+                  <column datatype='integer' name='Streamers' ordinal='6' />
+                  <column datatype='integer' name='Average viewers' ordinal='7' />
+                  <column datatype='integer' name='Average channels' ordinal='8' />
+                  <column datatype='real' name='Average viewer ratio' ordinal='9' />
+                  <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='yyyy' name='Year' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_740F4C998213456DADC197642D6006E8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Top games watched' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_BFB1DAB81C22448B80D2B6673A7E3F83]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Top games streamed' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='KPI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stream_data (1) (3)' name='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c'>
+            <column datatype='integer' name='[Average channels]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Average viewer ratio]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Average viewers]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Game]' role='dimension' type='nominal' />
+            <column caption='Stream time' datatype='real' name='[Stream time (hrs)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Streamers]' role='measure' type='quantitative' />
+            <column caption='Watch time' datatype='real' name='[Watch time (hrs)]' role='measure' type='quantitative' />
+            <column-instance column='[Average channels]' derivation='Sum' name='[sum:Average channels:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Average viewer ratio]' derivation='Sum' name='[sum:Average viewer ratio:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Average viewers]' derivation='Sum' name='[sum:Average viewers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Stream time (hrs)]' derivation='Sum' name='[sum:Stream time (hrs):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Streamers]' derivation='Sum' name='[sum:Streamers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Watch time (hrs)]' derivation='Sum' name='[sum:Watch time (hrs):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Average viewer ratio:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Average viewers:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Streamers:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Average channels:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Stream time (hrs):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Watch time (hrs):qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Average viewer ratio:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Average viewers:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Streamers:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Average channels:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Stream time (hrs):qk]&quot;</bucket>
+              <bucket>&quot;[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Watch time (hrs):qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]'>
+            <groupfilter function='member' level='[Game]' member='&quot;League of Legends&quot;' user:ui-action-filter='[Action1_740F4C998213456DADC197642D6006E8]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[:Measure Names]</column>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='wrap' value='on' />
+            <format attr='width' field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[:Measure Names]' value='197' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[:Measure Names]' value='30' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='cols' value='none' />
+            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='wrap' scope='cols' value='on' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='subtotal' scope='cols' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='cols' value='none' />
+            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='5' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-color' scope='cols' value='#f5f5f5' />
+            <format attr='div-level' scope='cols' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{61C3A587-2830-46A3-95B3-07622BE66EB7}' />
+    </worksheet>
+    <worksheet name='Stream time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Stream time trends&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stream_data (1) (3)' name='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c'>
+            <column datatype='string' name='[Game]' role='dimension' type='nominal' />
+            <column caption='Stream time' datatype='real' name='[Stream time (hrs)]' role='measure' type='quantitative' />
+            <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Stream time (hrs)]' derivation='Sum' forecast-column-base='[sum:Stream time (hrs):qk]' forecast-column-type='forecast-value' name='[fVal:sum:Stream time (hrs):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stream time (hrs)]' derivation='Sum' name='[sum:Stream time (hrs):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]'>
+            <groupfilter function='member' level='[Game]' member='&quot;League of Legends&quot;' user:ui-action-filter='[Action1_740F4C998213456DADC197642D6006E8]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[fVal:sum:Stream time (hrs):qk]' palette='purple_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[fVal:sum:Stream time (hrs):qk]' />
+              <lod column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Forecast Indicator:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[fVal:sum:Stream time (hrs):qk]</rows>
+        <cols>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[tyr:Year:qk]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{240F7C1F-DF23-4514-9BE6-89DF3235B18F}' />
+    </worksheet>
+    <worksheet name='Top games streamed'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Top games by stream time</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stream_data (1) (3)' name='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c'>
+            <column caption='Stream time rank' datatype='integer' name='[Calculation_1144125478197825538]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='RANK(sum([Stream time (hrs)]),&apos;desc&apos;)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Game]' role='dimension' type='nominal' />
+            <column caption='Stream time' datatype='real' name='[Stream time (hrs)]' role='measure' type='quantitative' />
+            <column-instance column='[Game]' derivation='None' name='[none:Game:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stream time (hrs)]' derivation='Sum' name='[sum:Stream time (hrs):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1144125478197825538]' derivation='User' name='[usr:Calculation_1144125478197825538:ok:5]' pivot='key' type='ordinal'>
+              <table-calc ordering-field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Game]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]'>
+            <groupfilter function='member' level='[Game]' member='&quot;League of Legends&quot;' user:ui-action-filter='[Action1_740F4C998213456DADC197642D6006E8]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Stream time (hrs)])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Game:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Stream time (hrs):qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]</column>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' />
+              <lod column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478197825538:ok:5]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Stream time (hrs):qk]</rows>
+        <cols>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]</cols>
+      </table>
+      <simple-id uuid='{80BD02C8-F984-4997-AFBB-C8B881FD8B13}' />
+    </worksheet>
+    <worksheet name='Top games watched'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Top games by watchtime</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stream_data (1) (3)' name='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c'>
+            <column caption='Watch time rank' datatype='integer' name='[Calculation_1144125478195159040]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='RANK(sum([Watch time (hrs)]),&apos;desc&apos;)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Game]' role='dimension' type='nominal' />
+            <column caption='Watch time' datatype='real' name='[Watch time (hrs)]' role='measure' type='quantitative' />
+            <column-instance column='[Game]' derivation='None' name='[none:Game:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Watch time (hrs)]' derivation='Sum' name='[sum:Watch time (hrs):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1144125478195159040]' derivation='User' name='[usr:Calculation_1144125478195159040:ok:6]' pivot='key' type='ordinal'>
+              <table-calc ordering-field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]'>
+            <groupfilter function='level-members' level='[Game]' user:ui-action-filter='[Action2_BFB1DAB81C22448B80D2B6673A7E3F83]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Watch time (hrs)])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Game:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Watch time (hrs):qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]</column>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' />
+              <lod column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478195159040:ok:6]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Watch time (hrs):qk]</rows>
+        <cols>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]</cols>
+      </table>
+      <simple-id uuid='{3DD46C1D-DF35-4235-B72E-F344F6F7DDC5}' />
+    </worksheet>
+    <worksheet name='Top streamed per year'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Most streamed game per year</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stream_data (1) (3)' name='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c'>
+            <column caption='Stream time rank' datatype='integer' name='[Calculation_1144125478197825538]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='RANK(sum([Stream time (hrs)]),&apos;desc&apos;)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Game]' role='dimension' type='nominal' />
+            <column caption='Stream time' datatype='real' name='[Stream time (hrs)]' role='measure' type='quantitative' />
+            <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Game]' derivation='None' name='[none:Game:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stream time (hrs)]' derivation='Sum' name='[sum:Stream time (hrs):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1144125478197825538]' derivation='User' name='[usr:Calculation_1144125478197825538:ok:5]' pivot='key' type='ordinal'>
+              <table-calc ordering-field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Game]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]'>
+            <groupfilter function='member' level='[Game]' member='&quot;League of Legends&quot;' user:ui-action-filter='[Action1_740F4C998213456DADC197642D6006E8]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478197825538:ok:5]'>
+            <groupfilter function='member' level='[usr:Calculation_1144125478197825538:ok:5]' member='1' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478197825538:ok:5]</column>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[yr:Year:ok]' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' />
+              <text column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' />
+              <lod column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478197825538:ok:5]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Stream time (hrs):qk]</rows>
+        <cols>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[yr:Year:ok]</cols>
+      </table>
+      <simple-id uuid='{2F578B70-6566-4AF0-AA4A-2CF9264E3ACF}' />
+    </worksheet>
+    <worksheet name='Top watched per year'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Most watched game per year</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stream_data (1) (3)' name='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c'>
+            <column caption='Watch time rank' datatype='integer' name='[Calculation_1144125478195159040]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='RANK(sum([Watch time (hrs)]),&apos;desc&apos;)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Game]' role='dimension' type='nominal' />
+            <column caption='Watch time' datatype='real' name='[Watch time (hrs)]' role='measure' type='quantitative' />
+            <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Game]' derivation='None' name='[none:Game:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Watch time (hrs)]' derivation='Sum' name='[sum:Watch time (hrs):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1144125478195159040]' derivation='User' name='[usr:Calculation_1144125478195159040:ok:11]' pivot='key' type='ordinal'>
+              <table-calc ordering-field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Game]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]'>
+            <groupfilter function='member' level='[Game]' member='&quot;League of Legends&quot;' user:ui-action-filter='[Action1_740F4C998213456DADC197642D6006E8]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478195159040:ok:11]'>
+            <groupfilter function='member' level='[usr:Calculation_1144125478195159040:ok:11]' member='1' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478195159040:ok:11]</column>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[yr:Year:ok]' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' />
+              <text column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[sum:Watch time (hrs):qk]</rows>
+        <cols>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[yr:Year:ok]</cols>
+      </table>
+      <simple-id uuid='{2BE6B5B5-E073-4AFE-91ED-392122A1BA8B}' />
+    </worksheet>
+    <worksheet name='Watch time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Watch time trends&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stream_data (1) (3)' name='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c'>
+            <column datatype='string' name='[Game]' role='dimension' type='nominal' />
+            <column caption='Watch time' datatype='real' name='[Watch time (hrs)]' role='measure' type='quantitative' />
+            <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Watch time (hrs)]' derivation='Sum' forecast-column-base='[sum:Watch time (hrs):qk]' forecast-column-type='forecast-value' name='[fVal:sum:Watch time (hrs):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Watch time (hrs)]' derivation='Sum' name='[sum:Watch time (hrs):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]'>
+            <groupfilter function='member' level='[Game]' member='&quot;League of Legends&quot;' user:ui-action-filter='[Action1_740F4C998213456DADC197642D6006E8]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[tyr:Year:qk]' scope='cols' value='true' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[fVal:sum:Watch time (hrs):qk]' palette='orange_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='in-tooltip' field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[fVal:sum:Watch time (hrs):qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[fVal:sum:Watch time (hrs):qk]' />
+              <lod column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Forecast Indicator:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[fVal:sum:Watch time (hrs):qk]</rows>
+        <cols>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[tyr:Year:qk]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='0' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{8935138D-A18F-49A2-9E1D-D139B6D08B30}' />
+    </worksheet>
+    <worksheet name='Watch time vs Stream time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Watch time vs Stream time</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stream_data (1) (3)' name='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c'>
+            <column caption='Normaised watch time' datatype='real' name='[Calculation_1144125478957219852]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='( SUM([Watch time (hrs)]) - WINDOW_MIN(SUM([Watch time (hrs)])) ) / ( WINDOW_MAX(SUM([Watch time (hrs)])) - WINDOW_MIN(SUM([Watch time (hrs)])) )'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Game]' role='dimension' type='nominal' />
+            <column caption='Normaised stream time ' datatype='real' name='[Normaised watch time (copy)_1144125478959140877]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='( SUM([Stream time (hrs)]) - WINDOW_MIN(SUM([Stream time (hrs)])) ) / ( WINDOW_MAX(SUM([Stream time (hrs)])) - WINDOW_MIN(SUM([Stream time (hrs)])) )'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stream time' datatype='real' name='[Stream time (hrs)]' role='measure' type='quantitative' />
+            <column caption='Watch time' datatype='real' name='[Watch time (hrs)]' role='measure' type='quantitative' />
+            <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1144125478957219852]' derivation='User' name='[usr:Calculation_1144125478957219852:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Normaised watch time (copy)_1144125478959140877]' derivation='User' name='[usr:Normaised watch time (copy)_1144125478959140877:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]'>
+            <groupfilter function='level-members' level='[Game]' user:ui-action-filter='[Action1_740F4C998213456DADC197642D6006E8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[Action (Game)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478957219852:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Normaised watch time (copy)_1144125478959140877:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478957219852:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Normaised watch time (copy)_1144125478959140877:qk] + [federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[usr:Calculation_1144125478957219852:qk])</rows>
+        <cols>[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[tyr:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{96B922EC-7A42-4C34-B04D-E2C0F146AD82}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='74293' id='26' param='horz' type-v2='layout-flow' w='98888' x='556' y='24743'>
+            <zone h='74293' id='17' type-v2='layout-basic' w='98888' x='556' y='24743'>
+              <zone h='74293' id='15' param='horz' type-v2='layout-flow' w='70813' x='28631' y='24743'>
+                <zone h='74293' id='13' type-v2='layout-basic' w='70813' x='28631' y='24743'>
+                  <zone h='74293' id='7' param='horz' type-v2='layout-flow' w='70813' x='28631' y='24743'>
+                    <zone h='74293' id='5' type-v2='layout-basic' w='70813' x='28631' y='24743'>
+                      <zone h='37147' id='3' name='Top games watched' w='35403' x='28631' y='24743'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='8' />
+                          <format attr='background-color' value='#ffffff' />
+                        </zone-style>
+                      </zone>
+                      <zone h='37146' id='9' name='Top games streamed' w='35403' x='28631' y='61890'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='8' />
+                          <format attr='background-color' value='#ffffff' />
+                        </zone-style>
+                      </zone>
+                      <zone h='37147' id='10' name='Top watched per year' w='35410' x='64034' y='24743'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='8' />
+                          <format attr='background-color' value='#ffffff' />
+                        </zone-style>
+                      </zone>
+                      <zone h='37146' id='11' name='Top streamed per year' w='35410' x='64034' y='61890'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='8' />
+                          <format attr='background-color' value='#ffffff' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='74293' id='23' param='vert' type-v2='layout-flow' w='28075' x='556' y='24743'>
+                <zone h='37146' id='24' name='Watch time' w='28075' x='556' y='24743'>
+                  <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='8' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone h='37146' id='28' name='Stream time' w='28075' x='556' y='61889'>
+                  <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='8' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='13776' id='29' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='98888' x='556' y='10967'>
+            <zone h='13735' id='22' name='KPI' show-title='false' w='98888' x='556' y='10964'>
+              <layout-cache cell-count-w='6' fixed-size-h='58' type-h='fixed' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#ffffff' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='10003' id='31' type-v2='text' w='98888' x='556' y='964'>
+            <formatted-text>
+              <run fontsize='18'>Video game stream dashboard</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f3ebf3' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#f5f5f5' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1900' minheight='1900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='35' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97394' id='34' param='vert' type-v2='layout-flow' w='98702' x='649' y='1303'>
+                <zone forceUpdate='true' h='9935' id='31' type-v2='text' w='98702' x='649' y='1303'>
+                  <formatted-text>
+                    <run fontsize='18'>Video game stream dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f3ebf3' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='93' h='13681' id='22' is-fixed='true' name='KPI' show-title='false' w='98702' x='649' y='11238'>
+                  <layout-cache cell-count-w='6' fixed-size-h='58' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='279' h='36889' id='24' is-fixed='true' name='Watch time' w='28023' x='649' y='24919'>
+                  <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='279' h='36890' id='3' is-fixed='true' name='Top games watched' w='35337' x='28672' y='24919'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='279' h='36890' id='10' is-fixed='true' name='Top watched per year' w='35342' x='64009' y='24919'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36889' id='28' is-fixed='true' name='Stream time' w='28023' x='649' y='61808'>
+                  <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36888' id='9' is-fixed='true' name='Top games streamed' w='35337' x='28672' y='61809'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36888' id='11' is-fixed='true' name='Top streamed per year' w='35342' x='64009' y='61809'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#f5f5f5' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4324D88E-C94D-4352-A13C-F42FA2E33029}' />
+    </dashboard>
+  </dashboards>
+  <windows pres-mode='true' show-side-pane='false' source-height='48'>
+    <window class='worksheet' name='KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{EDA356E6-49E6-49AC-A583-8B598D1CB21A}' />
+    </window>
+    <window class='worksheet' name='Top games watched'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{48A11BE7-68E6-4D6B-B28F-FCAE20198366}' />
+    </window>
+    <window class='worksheet' name='Top games streamed'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9B001C85-CD4C-4FB0-A860-020800FA62F5}' />
+    </window>
+    <window class='worksheet' name='Top watched per year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[none:Game:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0755D7D9-2B50-4447-A170-CC329FCDFBC8}' />
+    </window>
+    <window class='worksheet' name='Top streamed per year'>
+      <cards>
+        <edge name='left'>
+          <strip size='179'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{910664E3-4728-49A8-9AA3-3B0DC83DC577}' />
+    </window>
+    <window class='worksheet' name='Watch time vs Stream time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{250B1193-B131-4F6E-9C2D-00DA2E71D432}' />
+    </window>
+    <window class='worksheet' name='Watch time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[fVal:sum:Watch time (hrs):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4ADDE621-4C54-47BE-BE15-2A09282BAF50}' />
+    </window>
+    <window class='worksheet' name='Stream time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0gmtfdx0pm91nj1bs2h0j1ijhi8c].[fVal:sum:Stream time (hrs):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1697A9A8-1CC8-49AC-8B86-199FA7935DF3}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='KPI'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Stream time'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top games streamed'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top games watched'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top streamed per year'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top watched per year'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Watch time'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{86AEF6A7-8F19-4F8F-BE36-85BB39C5ABA7}' />
+    </window>
+  </windows>
+</workbook>

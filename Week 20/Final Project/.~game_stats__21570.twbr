@@ -10509,8 +10509,8 @@
           <member value='&quot;No&quot;' />
         </members>
       </column>
-      <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Game&quot;'>
-        <calculation class='tableau' formula='&quot;Game&quot;' />
+      <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Genre&quot;'>
+        <calculation class='tableau' formula='&quot;Genre&quot;' />
         <members>
           <member value='&quot;Game&quot;' />
           <member value='&quot;Genre&quot;' />
@@ -10526,8 +10526,8 @@
           <member value='&quot;Overall&quot;' />
         </members>
       </column>
-      <column caption='Sales by publishers' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;Nintendo&quot;'>
-        <calculation class='tableau' formula='&quot;Nintendo&quot;' />
+      <column caption='Sales by publishers' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;Activision&quot;'>
+        <calculation class='tableau' formula='&quot;Activision&quot;' />
         <members>
           <member value='&quot;Nintendo&quot;' />
           <member value='&quot;Activision&quot;' />
@@ -10536,8 +10536,8 @@
           <member value='&quot;EA Sports&quot;' />
         </members>
       </column>
-      <column caption='Sales by genres' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Action&quot;'>
-        <calculation class='tableau' formula='&quot;Action&quot;' />
+      <column caption='Sales by genres' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Role-Playing&quot;'>
+        <calculation class='tableau' formula='&quot;Role-Playing&quot;' />
         <members>
           <member value='&quot;Action&quot;' />
           <member value='&quot;Adventure&quot;' />
@@ -11090,7 +11090,7 @@
         </folder>
       </_.fcp.SchemaViewerObjectModel.true...folders-common>
       <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
-        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/vb/899gc5ld2m34yphmb2v4kr_80000gn/T/tableau-temp/#TableauTemp_0q4x5300ot0wec149n5u60u658r9.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/30/2024 03:35:05 PM' username='tableau_internal_user'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/vb/899gc5ld2m34yphmb2v4kr_80000gn/T/tableau-temp/#TableauTemp_0hv10ln0x2i3k511u2mjl1tvlfbg.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/01/2024 01:38:17 AM' username='tableau_internal_user'>
           <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
           <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
           <metadata-records>
@@ -16854,17 +16854,17 @@
         <column caption='Filter by' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Publisher&quot;'>
           <calculation class='tableau' formula='&quot;Publisher&quot;' />
         </column>
-        <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Game&quot;'>
-          <calculation class='tableau' formula='&quot;Game&quot;' />
+        <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Genre&quot;'>
+          <calculation class='tableau' formula='&quot;Genre&quot;' />
         </column>
         <column caption='Sales trends' datatype='string' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;Publishers&quot;'>
           <calculation class='tableau' formula='&quot;Publishers&quot;' />
         </column>
-        <column caption='Sales by publishers' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;Nintendo&quot;'>
-          <calculation class='tableau' formula='&quot;Nintendo&quot;' />
+        <column caption='Sales by publishers' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;Activision&quot;'>
+          <calculation class='tableau' formula='&quot;Activision&quot;' />
         </column>
-        <column caption='Sales by genres' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Action&quot;'>
-          <calculation class='tableau' formula='&quot;Action&quot;' />
+        <column caption='Sales by genres' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Role-Playing&quot;'>
+          <calculation class='tableau' formula='&quot;Role-Playing&quot;' />
         </column>
       </datasource-dependencies>
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
@@ -16948,8 +16948,8 @@
             <datasource name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Game&quot;'>
-              <calculation class='tableau' formula='&quot;Game&quot;' />
+            <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Genre&quot;'>
+              <calculation class='tableau' formula='&quot;Genre&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.0tjqy3p0vwr3ft14y3bwn1d7fsql'>
@@ -17071,8 +17071,8 @@
             <datasource name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Game&quot;'>
-              <calculation class='tableau' formula='&quot;Game&quot;' />
+            <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Genre&quot;'>
+              <calculation class='tableau' formula='&quot;Genre&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.0tjqy3p0vwr3ft14y3bwn1d7fsql'>
@@ -17378,14 +17378,14 @@
             <column caption='Sales by platform' datatype='string' name='[Best sellers (copy)]' param-domain-type='list' role='measure' type='nominal' value='&quot;PS2&quot;'>
               <calculation class='tableau' formula='&quot;PS2&quot;' />
             </column>
-            <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Game&quot;'>
-              <calculation class='tableau' formula='&quot;Game&quot;' />
+            <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Genre&quot;'>
+              <calculation class='tableau' formula='&quot;Genre&quot;' />
             </column>
-            <column caption='Sales by publishers' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;Nintendo&quot;'>
-              <calculation class='tableau' formula='&quot;Nintendo&quot;' />
+            <column caption='Sales by publishers' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;Activision&quot;'>
+              <calculation class='tableau' formula='&quot;Activision&quot;' />
             </column>
-            <column caption='Sales by genres' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Action&quot;'>
-              <calculation class='tableau' formula='&quot;Action&quot;' />
+            <column caption='Sales by genres' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Role-Playing&quot;'>
+              <calculation class='tableau' formula='&quot;Role-Playing&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.0tjqy3p0vwr3ft14y3bwn1d7fsql'>
@@ -17630,14 +17630,14 @@
             <column caption='Sales by platform' datatype='string' name='[Best sellers (copy)]' param-domain-type='list' role='measure' type='nominal' value='&quot;PS2&quot;'>
               <calculation class='tableau' formula='&quot;PS2&quot;' />
             </column>
-            <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Game&quot;'>
-              <calculation class='tableau' formula='&quot;Game&quot;' />
+            <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Genre&quot;'>
+              <calculation class='tableau' formula='&quot;Genre&quot;' />
             </column>
-            <column caption='Sales by publishers' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;Nintendo&quot;'>
-              <calculation class='tableau' formula='&quot;Nintendo&quot;' />
+            <column caption='Sales by publishers' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;Activision&quot;'>
+              <calculation class='tableau' formula='&quot;Activision&quot;' />
             </column>
-            <column caption='Sales by genres' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Action&quot;'>
-              <calculation class='tableau' formula='&quot;Action&quot;' />
+            <column caption='Sales by genres' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Role-Playing&quot;'>
+              <calculation class='tableau' formula='&quot;Role-Playing&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.0tjqy3p0vwr3ft14y3bwn1d7fsql'>
@@ -17871,8 +17871,8 @@
             <datasource name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Game&quot;'>
-              <calculation class='tableau' formula='&quot;Game&quot;' />
+            <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Genre&quot;'>
+              <calculation class='tableau' formula='&quot;Genre&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.0tjqy3p0vwr3ft14y3bwn1d7fsql'>
@@ -18112,6 +18112,9 @@
               </aliases>
             </column>
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tjqy3p0vwr3ft14y3bwn1d7fsql].[Action (Genre)]'>
+            <groupfilter function='level-members' level='[Genre]' user:ui-action-filter='[Action2_5243494BF1684FB1885F9660E96D580A]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
           <filter class='categorical' column='[federated.0tjqy3p0vwr3ft14y3bwn1d7fsql].[none:publisher:nk]'>
             <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
               <groupfilter direction='DESC' expression='COUNT([publisher])' function='order' user:ui-marker='order'>
@@ -18135,6 +18138,7 @@
           </shelf-sorts>
           <slices>
             <column>[federated.0tjqy3p0vwr3ft14y3bwn1d7fsql].[none:publisher:nk]</column>
+            <column>[federated.0tjqy3p0vwr3ft14y3bwn1d7fsql].[Action (Genre)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -18322,8 +18326,8 @@
             <member value='&quot;XOne&quot;' />
           </members>
         </column>
-        <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Game&quot;'>
-          <calculation class='tableau' formula='&quot;Game&quot;' />
+        <column caption='1. Filter by:' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Genre&quot;'>
+          <calculation class='tableau' formula='&quot;Genre&quot;' />
           <members>
             <member value='&quot;Game&quot;' />
             <member value='&quot;Genre&quot;' />
@@ -18331,8 +18335,8 @@
             <member value='&quot;Publisher&quot;' />
           </members>
         </column>
-        <column caption='Sales by publishers' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;Nintendo&quot;'>
-          <calculation class='tableau' formula='&quot;Nintendo&quot;' />
+        <column caption='Sales by publishers' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;Activision&quot;'>
+          <calculation class='tableau' formula='&quot;Activision&quot;' />
           <members>
             <member value='&quot;Nintendo&quot;' />
             <member value='&quot;Activision&quot;' />
@@ -18341,8 +18345,8 @@
             <member value='&quot;EA Sports&quot;' />
           </members>
         </column>
-        <column caption='Sales by genres' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Action&quot;'>
-          <calculation class='tableau' formula='&quot;Action&quot;' />
+        <column caption='Sales by genres' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;Role-Playing&quot;'>
+          <calculation class='tableau' formula='&quot;Role-Playing&quot;' />
           <members>
             <member value='&quot;Action&quot;' />
             <member value='&quot;Adventure&quot;' />
@@ -18361,13 +18365,13 @@
       </datasource-dependencies>
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='99686' id='32' param='horz' type-v2='layout-flow' w='99858' x='71' y='157'>
-            <zone h='99686' id='27' param='horz' type-v2='layout-flow' w='99858' x='71' y='157'>
-              <zone h='99686' id='24' param='horz' type-v2='layout-flow' w='99858' x='71' y='157'>
-                <zone h='99686' id='19' param='horz' type-v2='layout-flow' w='99858' x='71' y='157'>
-                  <zone h='99686' id='5' param='horz' type-v2='layout-flow' w='99858' x='71' y='157'>
-                    <zone h='99372' id='3' type-v2='layout-basic' w='99716' x='142' y='314'>
-                      <zone h='66492' id='8' name='Best Sellers' w='54363' x='283' y='32880'>
+          <zone h='99760' id='32' param='horz' type-v2='layout-flow' w='99862' x='69' y='120'>
+            <zone h='99760' id='27' param='horz' type-v2='layout-flow' w='99862' x='69' y='120'>
+              <zone h='99760' id='24' param='horz' type-v2='layout-flow' w='99862' x='69' y='120'>
+                <zone h='99760' id='19' param='horz' type-v2='layout-flow' w='99862' x='69' y='120'>
+                  <zone h='99760' id='5' param='horz' type-v2='layout-flow' w='99862' x='69' y='120'>
+                    <zone h='99520' id='3' type-v2='layout-basic' w='99724' x='138' y='240'>
+                      <zone h='66691' id='8' name='Best Sellers' w='54367' x='277' y='32828'>
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -18377,7 +18381,7 @@
                           <format attr='background-color' value='#ffffff' />
                         </zone-style>
                       </zone>
-                      <zone h='49396' id='12' name='Top 20 games' w='45071' x='54646' y='49976'>
+                      <zone h='49544' id='12' name='Top 20 games' w='45079' x='54644' y='49975'>
                         <zone-style>
                           <format attr='border-color' value='#f5f5f5' />
                           <format attr='border-style' value='solid' />
@@ -18387,9 +18391,10 @@
                           <format attr='background-color' value='#ffffff' />
                         </zone-style>
                       </zone>
-                      <zone forceUpdate='true' h='14316' id='16' type-v2='text' w='23847' x='283' y='628'>
+                      <zone forceUpdate='true' h='14357' id='16' type-v2='text' w='23847' x='277' y='481'>
                         <formatted-text>
-                          <run fontcolor='#ffffff' fontsize='36'>Video Game Sales </run>
+                          <run fontcolor='#ffffff' fontsize='28'>Video Game Sales</run>
+                          <run fontcolor='#ffffff' fontsize='36'>Æ </run>
                           <run>Æ&#10;</run>
                         </formatted-text>
                         <zone-style>
@@ -18400,7 +18405,7 @@
                           <format attr='background-color' value='#4c4b5b' />
                         </zone-style>
                       </zone>
-                      <zone h='17936' id='21' name='KPI' show-title='false' w='54363' x='283' y='14944'>
+                      <zone h='17990' id='21' name='KPI' show-title='false' w='54367' x='277' y='14838'>
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -18412,7 +18417,7 @@
                           <format attr='background-color' value='#efebe8' />
                         </zone-style>
                       </zone>
-                      <zone h='45787' id='25' name='Sales Trends ' w='45071' x='54646' y='4189'>
+                      <zone h='45923' id='25' name='Sales Trends ' w='45079' x='54644' y='4052'>
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -18422,7 +18427,7 @@
                           <format attr='background-color' value='#ffffff' />
                         </zone-style>
                       </zone>
-                      <zone h='14316' id='30' mode='compact' param='[Parameters].[Parameter 5]' type-v2='paramctrl' w='7438' x='39083' y='628'>
+                      <zone h='14357' id='30' mode='compact' param='[Parameters].[Parameter 5]' type-v2='paramctrl' w='7439' x='39079' y='481'>
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -18431,7 +18436,7 @@
                           <format attr='background-color' value='#f0f3fa' />
                         </zone-style>
                       </zone>
-                      <zone h='14316' hide-buttons='true' id='9' mode='compact' param='[Parameters].[Parameter 3]' type-v2='paramctrl' w='7684' x='24130' y='628'>
+                      <zone h='14357' hide-buttons='true' id='9' mode='compact' param='[Parameters].[Parameter 3]' type-v2='paramctrl' w='7685' x='24124' y='481'>
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -18440,7 +18445,7 @@
                           <format attr='background-color' value='#cfd6f3' />
                         </zone-style>
                       </zone>
-                      <zone h='14316' id='29' mode='compact' param='[Parameters].[Parameter 6]' type-v2='paramctrl' w='7269' x='31814' y='628'>
+                      <zone h='14357' id='29' mode='compact' param='[Parameters].[Parameter 6]' type-v2='paramctrl' w='7270' x='31809' y='481'>
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -18449,7 +18454,7 @@
                           <format attr='background-color' value='#f0f3fa' />
                         </zone-style>
                       </zone>
-                      <zone h='3561' id='28' leg-item-layout='horz' name='Sales Trends ' pane-specification-id='2' param='[federated.0tjqy3p0vwr3ft14y3bwn1d7fsql].[:Measure Names]' show-title='false' type-v2='color' w='45071' x='54646' y='628'>
+                      <zone h='3571' id='28' leg-item-layout='horz' name='Sales Trends ' pane-specification-id='2' param='[federated.0tjqy3p0vwr3ft14y3bwn1d7fsql].[:Measure Names]' show-title='false' type-v2='color' w='45079' x='54644' y='481'>
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -18457,7 +18462,7 @@
                           <format attr='margin' value='4' />
                         </zone-style>
                       </zone>
-                      <zone h='14316' id='33' mode='compact' param='[Parameters].[Best sellers (copy)]' type-v2='paramctrl' w='8125' x='46521' y='628'>
+                      <zone h='14357' id='33' mode='compact' param='[Parameters].[Best sellers (copy)]' type-v2='paramctrl' w='8126' x='46518' y='481'>
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -18508,7 +18513,7 @@
           <zone h='91368' id='12' param='horz' type-v2='layout-flow' w='100000' x='0' y='8632'>
             <zone h='91368' id='7' param='horz' type-v2='layout-flow' w='100000' x='0' y='8632'>
               <zone h='91368' id='5' type-v2='layout-basic' w='100000' x='0' y='8632'>
-                <zone h='40299' id='3' name='Num games per year' w='99434' x='283' y='54312'>
+                <zone h='40430' id='3' name='Num games per year' w='99444' x='278' y='54311'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -18517,10 +18522,10 @@
                     <format attr='background-color' value='#ffffff' />
                   </zone-style>
                 </zone>
-                <zone h='45052' id='8' param='horz' type-v2='layout-flow' w='99434' x='283' y='9260'>
-                  <zone h='45052' id='9' param='horz' type-v2='layout-flow' w='99434' x='283' y='9260'>
-                    <zone h='45052' id='14' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='99434' x='283' y='9260'>
-                      <zone h='45055' id='15' name='Top Genre' w='33168' x='283' y='9262'>
+                <zone h='45197' id='8' param='horz' type-v2='layout-flow' w='99444' x='278' y='9114'>
+                  <zone h='45197' id='9' param='horz' type-v2='layout-flow' w='99444' x='278' y='9114'>
+                    <zone h='45197' id='14' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='99444' x='278' y='9114'>
+                      <zone h='45180' id='15' name='Top Genre' w='33194' x='278' y='9157'>
                         <layout-cache cell-count-w='5' minheight='192' non-cell-size-w='52' type-h='scalable' type-w='cell' />
                         <zone-style>
                           <format attr='border-color' value='#000000' />
@@ -18530,7 +18535,7 @@
                           <format attr='background-color' value='#ffffff' />
                         </zone-style>
                       </zone>
-                      <zone h='45055' id='10' name='Top Publisher' w='33169' x='33451' y='9262'>
+                      <zone h='45180' id='10' name='Top Publisher' w='33125' x='33472' y='9157'>
                         <layout-cache cell-count-w='5' minheight='183' non-cell-size-w='66' type-h='scalable' type-w='cell' />
                         <zone-style>
                           <format attr='border-color' value='#000000' />
@@ -18540,8 +18545,8 @@
                           <format attr='background-color' value='#ffffff' />
                         </zone-style>
                       </zone>
-                      <zone h='45055' id='18' name='Top platform' w='33097' x='66620' y='9262'>
-                        <layout-cache cell-count-w='5' minheight='164' non-cell-size-w='52' type-h='scalable' type-w='cell' />
+                      <zone h='45180' id='18' name='Top platform' w='33125' x='66597' y='9157'>
+                        <layout-cache cell-count-w='5' minheight='164' non-cell-size-w='66' type-h='scalable' type-w='cell' />
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -18553,7 +18558,7 @@
                     </zone>
                   </zone>
                 </zone>
-                <zone h='4761' id='16' leg-item-layout='horz' name='Top Genre' pane-specification-id='0' param='[federated.0tjqy3p0vwr3ft14y3bwn1d7fsql].[none:Genre:nk]' show-title='false' type-v2='color' w='99434' x='283' y='94611'>
+                <zone h='4777' id='16' leg-item-layout='horz' name='Top Genre' pane-specification-id='0' param='[federated.0tjqy3p0vwr3ft14y3bwn1d7fsql].[none:Genre:nk]' show-title='false' type-v2='color' w='99444' x='278' y='94741'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -18690,7 +18695,7 @@
       <simple-id uuid='{5A17F26B-7F1B-461C-AA52-5C825917691C}' />
     </dashboard>
   </dashboards>
-  <windows source-height='30'>
+  <windows pres-mode='true' show-side-pane='false' source-height='30'>
     <window class='worksheet' name='KPI'>
       <cards>
         <edge name='left'>
@@ -18744,7 +18749,7 @@
       </viewpoint>
       <simple-id uuid='{6A3E2914-822D-4FD5-9D00-044D26C187EF}' />
     </window>
-    <window class='worksheet' maximized='true' name='Num games per year'>
+    <window class='worksheet' name='Num games per year'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -19037,7 +19042,7 @@
       </cards>
       <simple-id uuid='{09F54581-3145-466B-9C31-8DFC881524EA}' />
     </window>
-    <window class='dashboard' name='Dashboard 1'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
       <viewpoints>
         <viewpoint name='Best Sellers'>
           <floating-toolbar-visibility value='1' />
